@@ -1,0 +1,254 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:  #db2b37;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+/* Container principal */
+.container {
+    max-width: 1920px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #64754a;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.logo-ley {
+    font-size: 30px;
+    margin: 0;
+}
+
+.logo-plus {
+    font-size: 42px;
+    margin: 0;
+}
+
+/* Menu de navegação desktop*/
+.menu-list {
+    display: flex;
+    gap: 40px; /* Espaçamento entre os links */
+}
+
+.menu-list a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+/* Ícones */
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-left: 1px solid #aaa; /* Linha de divisão */
+    padding-left: 20px;
+}
+
+.icons img {
+    width: 23px;
+    height: auto;
+}
+
+/* Ícone do carrinho */
+.cart-icon {
+    background-color: #aa703b;
+    border-radius: 4px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-icon img {
+    width: 23px;
+}
+
+/*Busca expansível*/
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    display: none;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+.search-container.expanded .search-input {
+    display: inline;
+    width: 150px;
+}
+
+#search-icon {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+
+
+/* Botão de menu mobile (hambúrguer) */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Menu mobile */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #64754a;
+    padding: 20px;
+}
+
+.mobile-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Estilos responsivos para telas menores que 768px */
+@media screen and (max-width: 768px) {
+    .menu-list {
+        display: none; /* Esconde o menu desktop */
+    }
+
+    .menu-toggle {
+        display: block; /* Mostra o botão de menu */
+    }
+
+    .icons {
+        gap: 15px;
+    }
+
+    .search-input {
+        width: 0;
+        display: none;
+    }
+
+    .search-container.expanded .search-input {
+        display: inline-block;
+        width: 100px;
+    }
+
+    .mobile-menu.show {
+        display: flex; /* Exibe o menu mobile quando ativado */
+    }
+}
+
+/* Hero section - Banner e informações em geral */
+.hero {
+    background-color: #db2b37;
+    padding: 50px 20px;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero img {
+    max-width: 100%;
+    height: auto;
+}
+
+.hero h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+hero .banner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+}
+
+.hero .image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;    
+}
+
+/* Seção de produtos */
+.products {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+    gap: 20px;
+}
+
+.products .product-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+}
+
+.products .product-item img {
+    width: 100px;
+    height: auto;
+}
+
+/* Rodapé */
+footer {
+    background-color: #667153;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+footer .social-links a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+
+footer .contact-info {
+    margin-top: 10px;
+}
