@@ -1,0 +1,545 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*Fonte do google*/
+
+/* CSS Reset - serve para garantir estilo consistente em diversos navegadores */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Kanit, sans-serif;
+}
+
+
+body {    
+    margin: 0;
+    padding: 0;
+    background-color:  #db2b37;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+/* Usar fonte Arial nos títulos */
+h1, h2, h3 {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Container principal */
+.container {
+    max-width: 1920px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #64754a;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.logo-ley {
+    font-size: 30px;
+    margin: 0;
+    color: #ffc400;
+}
+
+.logo-plus {
+    font-size: 42px;
+    margin: 0;
+    color:#db2b37
+}
+
+/* Menu de navegação desktop*/
+.menu-list {
+    display: flex;
+    gap: 40px; /* Espaçamento entre os links */
+    margin-left: 110px;    
+}
+
+.menu-list a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;   
+}
+
+/* Ícones */
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-left: 1px solid white; /* Linha de divisão */
+    padding-left: 20px;    
+}
+
+.icons img {
+    width: 24px;
+    height: auto;
+}
+
+/* Ícone do carrinho */
+.cart-icon {
+    display: flex;
+    background-color: #aa703b;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    width: 26px;
+    height: 26px;
+    padding-top: 6px;
+    margin-bottom: 6px;
+        
+}
+
+.cart-icon img {
+    width: 24px;
+    height: auto;
+}
+
+/*Busca expansível*/
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    display: none;
+    padding: 1px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-left: 7px;
+}
+
+.search-container.expanded .search-input {
+    display: inline;
+    width: 160px;
+}
+
+#search-icon {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    margin-bottom: 6px;
+}
+
+/* Botão de menu mobile "hambúrguer" (tablets e smartphones) */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Menu mobile */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #64754a;
+    padding: 20px;
+}
+
+.mobile-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+
+/* Hero section (body)- Banner, informações em geral, produtos */
+.hero {
+    background-color: #db2b37;
+    text-align: center;
+    color: white;
+    position: relative;
+    margin-top: 60px;
+}
+
+.hero img {
+    width: 75%;
+    height: auto;    
+}
+
+.hero h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 30px;    
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;    
+}
+
+/* Seção de produtos */
+.products {
+    display: flex;
+    flex-wrap: wrap; /* Permite os itens quebrarem linha */
+    justify-content: center; /* Centraliza os itens */
+    gap: 20px; /* Espaço entre os itens */
+    margin: 20px auto;
+    max-width: 100%;
+}
+
+.products .product-item {
+    text-align: center;
+    color: white;
+    width: 150px;
+}
+
+.products .product-item img {
+    width: 100%; /* Garante que a imagem se ajuste ao contêiner */
+    max-width: 150px;
+    height: auto;
+    border: 3px solid #ddd;
+    border-radius: 10px;
+    transition: 0.3s; /*complementa o efeito "hover" 
+    adicionando uma transição gradual, melhorando a experiência visual.*/
+}
+
+.products .product-item img:hover { 
+/*efeito de transformação para alterar o tamanho das imagens 
+dentro dos itens de produtos quando o usuário passa o mouse sobre elas.*/
+    transform: scale(1.1); /*Aumenta em 10% a imagem durante o efeito*/
+}
+
+/* Botão flutuante para o topo */
+.btn-flutuante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #64754a;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-flutuante img {
+    width: 55px;
+    height: 55px;
+}
+
+.btn-flutuante:hover {
+    transform: scale(1.1);
+    background-color: #db2b37;
+    cursor: pointer;
+}
+
+/* Rodapé */
+footer {
+    background-color: #a0ab8d;
+}
+
+footer .footer-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite os itens quebrarem linha em telas menores */
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 10px 20px; /* Adiciona espaçamento interno */
+}
+
+footer .contact-info {
+    color: white;
+    flex: 1; /* Ocupa espaço proporcional */
+    order: 1; /* Ordem padrão: primeiro da esquerda pra direita */
+}
+
+footer .contact-info ul {
+    list-style-type: none;
+}
+
+footer .contact-info ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+footer .contact-info a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+footer .contact-info img {
+    width: 30px;
+    height: auto;
+}
+
+footer .social-links {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex: 1; /* Ocupa espaço proporcional */
+    order: 3; /* Ordem padrão: terceiro da esquerda pra direita (telas grandes) */
+}
+
+footer .social-links img {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.3s ease;
+}
+
+footer .social-links img:hover {
+    transform: scale(1.1);
+}
+
+footer .disclaimer {
+    text-align: center; /* Centraliza o texto */
+    flex: 1; /* Ocupa espaço proporcional */
+    color: white;
+    font-size: 16px;  
+    order: 2; /* Ordem padrão: no centro (telas grandes) */  
+}
+
+footer .disclaimer p {
+    margin: 0;
+}
+
+
+/* Estilos responsivos para telas menores que 1000px */
+@media screen and (max-width: 1000px) {
+    .menu-list {
+        display: none; /* Esconde o menu desktop */
+    }
+
+    .menu-toggle {
+        display: block; /* Mostra o botão de menu */
+    }
+
+    .icons {
+        gap: 15px;
+    }
+
+    .search-input {
+        width: 0;
+        display: none;
+    }
+
+    .search-container.expanded .search-input {
+        display: inline-block;
+        width: 100px;
+    }
+
+    .mobile-menu.show {
+        display: flex; /* Exibe o menu mobile quando ativado */
+    }
+
+    .hero img {
+        width: 95%;
+        height: auto;
+    }
+
+    .hero h2 {
+        font-size: 28px; /* Reduz o tamanho do título */
+    }
+
+    .hero p {
+        font-size: 16px; /* Texto menor em telas menores */
+        padding: 0 20px;
+    }
+
+    .products .product-item {
+        width: 130px; /* Reduz a largura dos itens */
+    }
+
+    .products {
+        gap: 15px; /* Reduz o espaço entre os itens */
+    }
+
+    footer .footer-container {
+        flex-direction: column; /* Empilha os itens verticalmente */
+        align-items: center;
+        text-align: center;
+        gap: 5px;
+    }
+
+    footer .contact-info {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    footer .contact-info ul li {
+        justify-content: center;
+    }
+
+    footer .social-links {
+        margin-top: 15px;
+    }
+
+    footer .disclaimer {
+        order: 4; /* Garante que o disclaimer seja o último elemento em telas pequenas */
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 800px) {
+    .menu-list {
+        display: none; /* Esconde o menu desktop */
+    }
+
+    .menu-toggle {
+        display: block; /* Mostra o botão de menu */
+    }
+
+    .icons {
+        gap: 15px;
+    }
+
+    .search-input {
+        width: 0;
+        display: none;
+    }
+
+    .search-container.expanded .search-input {
+        display: inline-block;
+        width: 100px;
+    }
+
+    .mobile-menu.show {
+        display: flex; /* Exibe o menu mobile quando ativado */
+    }
+
+    .hero h2 {
+        font-size: 28px; /* Reduz o tamanho do título */
+    }
+
+    .hero p {
+        font-size: 16px; /* Texto menor em telas menores */
+        padding: 0 20px;
+    }
+
+    .products .product-item {
+        width: 130px; /* Reduz a largura dos itens */
+    }
+
+    .products {
+        gap: 15px; /* Reduz o espaço entre os itens */
+    }
+
+    footer .footer-container {
+        flex-direction: column; /* Empilha os itens verticalmente */
+        align-items: center;
+        text-align: center;
+        gap: 5px;
+    }
+
+    footer .contact-info {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    footer .contact-info ul li {
+        justify-content: center;
+    }
+
+    footer .social-links {
+        margin-top: 15px;
+    }
+
+    footer .disclaimer {
+        order: 4; /* Garante que o disclaimer seja o último elemento em telas pequenas */
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 500px) {
+    .menu-list {
+        display: none; /* Esconde o menu desktop */
+    }
+
+    .menu-toggle {
+        display: block; /* Mostra o botão de menu */
+    }
+
+    .icons {
+        gap: 15px;
+    }
+
+    .search-input {
+        width: 0;
+        display: none;
+    }
+
+    .search-container.expanded .search-input {
+        display: inline-block;
+        width: 100px;
+    }
+
+    .mobile-menu.show {
+        display: flex; /* Exibe o menu mobile quando ativado */
+    }
+
+    .hero h2 {
+        font-size: 28px; /* Reduz o tamanho do título */
+    }
+
+    .hero p {
+        font-size: 16px; /* Texto menor em telas menores */
+        padding: 0 20px;
+    }
+
+    .products .product-item {
+        width: 130px; /* Reduz a largura dos itens */
+    }
+
+    .products {
+        gap: 15px; /* Reduz o espaço entre os itens */
+    }
+
+    footer .footer-container {
+        flex-direction: column; /* Empilha os itens verticalmente */
+        align-items: center;
+        text-align: center;
+        gap: 5px;
+    }
+
+    footer .contact-info {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    footer .contact-info ul li {
+        justify-content: center;
+        font-size: 14px; /* Reduz o tamanho do texto para telas muito pequenas */
+    }
+
+    footer .social-links {
+        margin-top: 15px;
+    }
+
+    footer .social-links img {
+        width: 30px;
+        height: 30px;
+    }
+
+    footer .disclaimer {
+        order: 4; /* Garante que o disclaimer seja o último elemento em telas pequenas */
+        margin-top: 15px;
+    }
+}
+
+

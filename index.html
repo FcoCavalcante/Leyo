@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leyo+</title>
+    <link rel="stylesheet" href="css/stylesite.css">
+</head>
+<body id="topo"> <!-- id para "puxar" o botão para o topo-->
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container">
+            <!-- Logo -->
+            <div class="logo">
+                <h1 class="logo-ley">Leyo</h1>
+                <h1 class="logo-plus">+</h1>
+            </div>
+
+            <!-- Menu de Navegação -->
+            <nav class="menu-list">
+                <a href="#">Quem somos</a> 
+                <a href="#">Como funciona</a>
+                <a href="#">Livro do Mês</a>
+                <a href="#">Produtos</a>
+            </nav>
+
+            <!-- Ícones e Menu Mobile -->
+            <div class="icons">
+                <div class="search-container"> <!-- Botão de busca expansível -->
+                    <img src="img/busca.png" alt="Buscar" id="search-icon">
+                    <input type="text" id="txtBusca" placeholder="Buscar..." class="search-input">
+                </div>
+                <a href="#"><img src="img/favoritos.png" alt="Favoritos"></a>
+                <a href="#"><img src="img/login.png" alt="Login"></a>
+                    <div class="cart-icon">    
+                        <a href="#"><img src="img/carrinho.png" alt="Carrinho"></a>
+                    </div>
+                <!-- Botão de menu mobile -->
+                <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+            </div>
+        </div>
+
+        <!-- Menu Mobile (escondido por padrão) -->
+        <nav class="mobile-menu">
+            <a href="#">Quem somos</a>
+            <a href="#">Como funciona</a>
+            <a href="#">Livro do Mês</a>
+            <a href="#">Produtos</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section - referente ao banner -->
+    <section class="hero">
+        <img src="img/biblioteca.png" alt="Banner Biblioteca">
+        <h2>A formação da sua biblioteca está aqui!</h2>
+        <p>A cada mês você recebe um livro de um gênero literário diferente.</p>
+    </section>
+
+    <!-- Seção de Produtos -->
+    <section class="products">
+        <div class="product-item">
+            <a href="#"><img src="img/odisseia.png" alt="Box Ilíada e Odisséia"></a>
+            <p>Box de setembro/2024: A Ilíada e Odisséia</p>
+        </div>
+        <div class="product-item">
+            <a href="#"><img src="img/eneida.png" alt="Box Eneida"></a>
+            <p>Box de outubro/2024: Eneida</p>
+        </div>
+        <div class="product-item">
+            <a href="#"><img src="img/divina.png" alt="Box Divina Comédia"></a>
+            <p>Box de novembro/2024: A Divina Comédia</p>
+        </div>
+        <div class="product-item">
+            <a href="#"><img src="img/dezembro.png" alt="Box Dezembro"></a>
+            <p>Box de dezembro/2024: ???</p>
+        </div>
+    </section>
+
+    <!-- Botão para o Topo, linkado a id="topo" -->
+    <a href="#topo" class="btn-flutuante" aria-label="Voltar ao topo">
+        <img src="img/botao-site.png" alt="Voltar ao topo">
+    </a>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-container">
+            <div class="contact-info">
+                <ul>
+                    <li>
+                        <img src="img/email.png" alt="Ícone de e-mail">
+                        <a href="mailto:contato@leyo.com">contato@leyo.com</a>
+                    </li>
+                    <li>
+                        <img src="img/whatsapp.png" alt="Ícone do WhatsApp">
+                        <a href="tel:+5511912345678">(11) 91234-5678</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="social-links">
+                <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="img/x.png" alt="X"></a>
+                <a href="#"><img src="img/linkedin.png" alt="LinkedIn"></a>
+            </div>
+            <div class="disclaimer">
+                <p>© Leyo+ 2024 - Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/mobileleyo+.js"></script>
+</body>
+</html>
